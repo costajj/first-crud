@@ -1,10 +1,16 @@
+// importando a biblioteca express:
 import express from 'express';
 
+// instanciando a biblioteca para poder utilizar a biblioteca
 const app = express();
+// definindo a porta
 const port = 5000;
 const users = []
 
+// saying to express to use the json
 app.use(express.json());
+
+
 
 app.get('/users', (req, res) => {
     res.json(users);
